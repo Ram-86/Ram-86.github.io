@@ -95,6 +95,40 @@ body {
     font-size: small;
 }
 
+/* Parallax Styles */
+.parallax1 {
+    position: relative;
+    background-image: url("rbbt\ crbnng.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.content1 {
+    height: 1000px;
+    background-color: aliceblue;
+    font-size: medium;
+}
+
+.parallax2 {
+    position: relative;
+    background-image: url("view.avif");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+
+.content2 {
+    color: lavender;
+    font-size: medium;
+    text-align: center;
+    padding: 150px;
+}
+
 /* Responsive Design */
 @media only screen and (max-width: 700px) {
     .navigationbar {
