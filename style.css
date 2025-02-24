@@ -1,0 +1,215 @@
+/* Global Styles */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+/* Header Styling */
+.header {
+    background-color: indianred;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Navigation Bar */
+.navigationbar {
+    background-color: gold;
+    text-align: center;
+    padding: 20px;
+}
+
+.navigationbar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: coral;
+    font-size: 18px;
+}
+
+.navigationbar a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-button {
+    background-color:dimgray;
+    color: aliceblue;
+    border: 0;
+    font-size: large;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: azure;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Content Section */
+.content {
+    background-color: cornflowerblue;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: lightsteelblue;
+    padding: 15px;
+    text-align: center;
+    font-size: small;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 700px) {
+    .navigationbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content {
+        display: block;
+        padding: 15px;
+    }
+
+    .dropdown {
+        display: block;
+        text-align: center;
+    }
+
+    .menu-button {
+        background-color: blueviolet;
+        color: aliceblue;
+        border: 0;
+        font-size: large;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* Base Styles for Links in Navigation */
+.navigationbar a {
+    padding: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    position: relative;
+}
+
+/* Apply animation to the links */
+.navigationbar a:hover {
+    animation: menu-button 0.5s forwards;
+}
+
+/* Styling for the hover animation */
+@keyframes menu-button {
+    from { width: 0px; }
+    to { width: 130px; }
+}
+
+/* Create an underline effect on hover */
+.navigationbar a::after {
+    content: "";
+    background-color: cornflowerblue;
+    width: 0px;
+    height: 4px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.navigationbar a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Button Styling */
+.dropdown-button {
+    background-color: midnightblue;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+/* Dropdown Content */
+.dropdown-content a {
+    text-decoration: none;
+    color: midnightblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(5, 5, 5, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
